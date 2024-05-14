@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devBuild": "npx webpack --config webpack.development.config.js",
-    "devServe": "npx webpack --config webpack.development.config.js && npx webpack serve --config webpack.development.config.js"
+    "devServe": "npx webpack --config webpack.development.config.js && npx webpack serve --config webpack.development.config.js",
+    "prodBuild": "npx webpack --config webpack.production.config.js",
+    "prodServe": "npx webpack --config webpack.production.config.js && npx webpack serve --config webpack.production.config.js"
   },
   "repository": {
     "type": "git",
@@ -31,10 +33,12 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.1",
+    "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^9.5.11",
     "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.91.0",
     "webpack-dev-server": "^5.0.4"
   }
